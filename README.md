@@ -1,4 +1,4 @@
-# 2021ct_jeongmi
+# jeongmi_codingtest
 study for coding test
 
 - This repository is a python library for PS(Problem-Solving) test
