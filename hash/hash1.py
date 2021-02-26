@@ -10,3 +10,17 @@ def solution(participant, completion):
             if participant[i] != completion[i] :
                 return participant[i]
     return participant[num]
+
+
+def solution2 (participant, completion) :  
+    answer = ''
+    temp = 0
+    dic = {}
+    for i in participant :
+        dic[hash(i)] = i
+        temp += int(hash(i))
+    for j in completion :
+        temp -= hash(j)
+    answer = dic[temp]
+
+    return answer
