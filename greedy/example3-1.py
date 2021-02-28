@@ -12,4 +12,4 @@ def solution(n) :
         n%=i
     return print(result)
 
-solution(n)
+solution(n
