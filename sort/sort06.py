@@ -10,4 +10,4 @@ list_n.sort()
 list_k.sort(reverse=True)
 for i in range(k) :
     list_n[i], list_k[i] = list_k[i], list_n[i]
-print(sum(list_n))
+print(sum(list_n)) 
