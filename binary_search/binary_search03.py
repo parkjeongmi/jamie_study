@@ -13,6 +13,15 @@ def binary_search(array, target, start, end) :
         return binary_search(array, target, start, mid-1)
     else : return binary_search(array, target, mid+1, end)
 
+def binary_search_while(array, target, start, end) :
+    while (start <= end) :
+        mid = (start+end)//2
+        if array[mid] == target :
+            return mid
+        elif array[mid] > target :
+            end = mid-1
+        else : start = mid+1
+
 n = 4
 n_array = [4, 6, 3, 15]
 m = 2
@@ -22,7 +31,7 @@ print_result = []
 n_array.sort()
 m_array.sort()
 for i in m_array :
-    result = binary_search(n_array, i, 0, n-1)
+    result = binary_search_while(n_array, i, 0, n-1)
     if result == None : print_result.append("no")
     else : print_result.append("yes")
 

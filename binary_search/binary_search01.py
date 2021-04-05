@@ -1,4 +1,5 @@
 #이진탐색 (재귀함수 이용)
+#틀린 부분 : return 빼먹음 / mid 값 계산 틀림(start와 end를 더해야함)
 
 def binary_search(array, target, start, end) :
     mid = (start+end) // 2
@@ -11,8 +12,6 @@ def binary_search(array, target, start, end) :
         return binary_search(array, target, mid+1, end)
     else : 
         return binary_search(array, target, start, mid-1)
-    
-
 
 
 n, target = list(map(int, input().split()))
