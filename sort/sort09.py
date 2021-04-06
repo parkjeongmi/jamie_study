@@ -27,5 +27,18 @@ def quick_sort(array, start, end) :
     quick_sort(array, start, right-1)
     quick_sort(array, right+1, end)
 
+#틀린 부분 : array 길이가 1 이하면, array를 return
+#틀린 부분 : [pivot] -> 정수는 배열 안에 넣어서 반환해야함
+def quick_sort_python(array) :
+    if len(array) <= 1 : return array
+
+    pivot = array[0]
+    tail = array[1:]
+    left_side = [x for x in tail if x <= pivot]
+    right_side = [x for x in tail if x > pivot]
+    return quick_sort_python(left_side) + [pivot] + quick_sort_python(right_side)
+
 quick_sort(array, 0, len(array)-1)
-print (array)
+print(quick_sort_python(array))
+
+#print (array)
