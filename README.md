@@ -7,6 +7,8 @@ study for coding test
 
 ## Algorithm
 ### 1. 그리디
+- 다익스트라 최단 경로 알고리즘
+- 크루스칼 알고리즘
 ### 2. 구현
 ### 3. DFS/BFS
 ### 4. 정렬
