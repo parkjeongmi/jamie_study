@@ -5,6 +5,7 @@
 
 #내가 풀었다!!!!!!1
 #해결하지 못한 점 : list 형식의 리턴 값을 출력하는 법을 모르겠다 -> 일단 함수 밖에서 출력함
+#시간초과
 from collections import deque
 
 def bfs(n,m,k,x,graph) :
