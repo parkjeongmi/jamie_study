@@ -11,22 +11,22 @@ INF = int(1e9)
 
 n, m = map(int, input().split())
 start = int(input())
-graph = [[] for _ in range(n+1)]
+graph = [[] for i in range(n+1)]
 visited = [False] * (n+1)
 distance = [INF] * (n+1)
 
 for _ in range(m) :
-    a,b,c = map(int, input().split())
-    graph[a] = graph.append((b,c))
+    a, b, c = map(int, input().split())
+    graph[a].append((b,c))
 
 #틀린 부분 : index 초기화 안함
 #틀린 부분 : for문 범위는 1부터 n까지임
 def min_node() :
-    min = INF
+    min_value = INF
     index = 1
     for i in range(1, n+1) :
-        if distance[i] < min and visited[i] == False :
-            min = distance[i]
+        if distance[i] < min_value and visited[i] == False :
+            min_value = distance[i]
             index = i
     return index
 
@@ -50,9 +50,9 @@ def dijkstra(start) :
 dijkstra(start)
 
 for i in range(1, n+1) :
-    if dijkstra[i] == INF :
+    if distance[i] == INF :
         print("Infinity")
-    else : print(dijkstra[i])
+    else : print(distance[i])
 
 
 
