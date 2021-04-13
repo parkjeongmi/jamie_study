@@ -32,3 +32,5 @@ study for coding test
 - dijkstra (노드-노드)
 - floyd-warshall (모든 노드-모든 노드)
 ### 8. 그래프 이론
+- 크루스칼 알고리즘
+- 위상 정렬 알고리즘
