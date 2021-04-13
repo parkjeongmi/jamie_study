@@ -52,7 +52,7 @@ dijkstra(start)
 for i in range(1, n+1) :
     if distance[i] == INF :
         print("Infinity")
-    else : print(distance[i])
+    else : print(dijkstra[i])
 
 
 
