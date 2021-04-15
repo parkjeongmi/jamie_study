@@ -7,7 +7,7 @@
 
 #알고리즘 1. 전체 - 못듣는학생
 #알고리즘 2. 여벌 체육복 가져온 학생 중 도난 당한 학생 제외하기
-#알고리즘 3. 여벌 체육복 양쪽에 도난 당한 학생 확인 -> 있으면 두개 리스트 다 제외
+#알고리즘 3. 여벌 체육복 양쪽에 도난 당한 학생 확인 -> 있으면 두 개 리스트 다 제외
 #알고리즘 4. 도난 당했지만, 리스트에 남아있는 학생 수 세기
 #-> 시간 초과
 
@@ -51,3 +51,20 @@ def solution(n,lost,reserve) :
             sum += 1
     return n - sum
 print(solution(n,lost,reserve))
+
+def answer_solution(n,lost,reserve) :
+    _reserve = [r for r in reserve if r not in lost]
+    _lost = [l for l in lost if l not in reserve]
+    #lost와 reserve 모두 중복되는 값은 제거해야 함.
+    #set_reserve = set(reserve) - set(lost)
+    #set_lost = set(lost) - set(reserve)
+
+
+    for r in _reserve :
+        f = r - 1
+        b = r + 1
+        if f in _lost :
+            _lost.remove(f)
+        elif b in _lost :
+            _lost.remove(b)
+    return n - len(_lost)
