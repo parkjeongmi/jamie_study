@@ -25,4 +25,28 @@ def solution(name) :
             if i != len(name) :
                 count+=1
     return count
-print(solution(name2))
+
+
+def solution_answer(name) :
+    #make_name은 변환할 최소값이 담긴 list
+    make_name = [min(ord(i) - ord("A"), ord('Z') - ord(i) + 1) for i in name]
+
+    idx, answer = 0, 0
+    while True :
+        answer += make_name[idx]
+        make_name[idx] = 0
+        if sum(make_name) == 0 :
+            break
+
+        #좌우 이동방향 정하기
+        left, right = 1, 1
+        while make_name[idx-left] == 0 :
+            left += 1
+        while make_name[idx+right] == 0 :
+            right += 1
+
+        #해당 방향으로 위치 조절 (모든 리스트의 값이 0이 될 때까지)     
+        answer += left if left < right else right
+        idx += -left if left< right else right
+    return answer
+print(solution_answer(name2))
