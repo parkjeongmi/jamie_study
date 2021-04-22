@@ -40,7 +40,7 @@ print(True)
 # for key in phone_book :
 #     d[key] = 0
         
-#문제 : 다음 값이랑 비교 어떻게 함? -> for문으로 돌자 
+# 문제 : 다음 값이랑 비교 어떻게 함? -> for문으로 돌자 
 # keys = list(d.keys())
 # index = 0
 # for i in phone_book :

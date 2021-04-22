@@ -35,10 +35,18 @@ r = set(reserve) - s
 #l의 원소 꺼내서 -> l-1이 r에 있으면 제거, l+1이 r에 있으면 제거
 #n에서 l 원소 수 빼기
 
-for i in sorted(r) :
-    if i-1 in l :
-        l.remove(i-1)
-    elif i+1 in l :
-        l.remove(i+1)
+def solution(n, lost, reserve):
+    s = set(lost) & set(reserve)
+    l = set(lost) - s
+    r = set(reserve) - s
     
-print(n-len(l))
+    for i in sorted(r) :
+        if i-1 in l :
+            l.remove(i-1)
+        elif i+1 in l :
+            l.remove(i+1)
+    return n-len(l)
+
+d = {1,2,3}
+for i in list(d) :
+    print(i)
