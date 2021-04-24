@@ -3,8 +3,7 @@ study for coding test
 
 - This repository is a python library for PS(Problem-Solving) test
 - I aim to pass the coding test in the first half of 2021
-- [id]:https://programmers.co.kr/learn/courses/9877 "코딩테스트 광탈 면하기"
-- (4.20~4.27  7days)
+- https://programmers.co.kr/learn/courses/9877 (4.20~4.27  7days)
 
 ## Programmers : Kit
 ### 1. 해시
