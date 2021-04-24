@@ -2,8 +2,8 @@
 study for coding test
 
 - This repository is a python library for PS(Problem-Solving) test
-- We aim to pass the coding test in the first half of 2021
-- Rule : Solve PS every week and upload on this repository during 5 weeks
+- I aim to pass the coding test in the first half of 2021
+- https://programmers.co.kr/learn/courses/9877 (4.20~4.27  7days)
 
 ## Algorithm
 ### 1. 그리디
@@ -35,7 +35,7 @@ study for coding test
 - 크루스칼 알고리즘
 - 위상 정렬 알고리즘
 
-## Programmers:Kit
+## Programmers : Kit
 ### 1. 해시
 - 완주하지 못한 선수
 - 전화번호 목록
