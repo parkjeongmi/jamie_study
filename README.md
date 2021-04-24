@@ -3,7 +3,32 @@ study for coding test
 
 - This repository is a python library for PS(Problem-Solving) test
 - I aim to pass the coding test in the first half of 2021
-- https://programmers.co.kr/learn/courses/9877 (4.20~4.27  7days)
+- [id] : https://programmers.co.kr/learn/courses/9877 "코딩테스트 광탈 면하기" (4.20~4.27  7days)
+
+## Programmers : Kit
+### 1. 해시
+- 완주하지 못한 선수
+- 전화번호 목록
+- 위장
+- 베스트앨범 ⭐️
+### 2. 스택/큐
+### 3. 힙
+- 더 맵게
+- 디스크 컨트롤러 ⭐️
+### 4. 정렬
+- K번째 수
+- 가장 큰 수
+### 5. 완전탐색
+### 6. 그리디
+- 체육복
+- 조이스틱
+- 큰 수 만들기
+- 구명보트
+### 7. 동적계획법
+### 8. DFS/BFS
+### 9. 이분탐색
+### 10. 그래프
+* * * 
 
 ## Algorithm
 ### 1. 그리디
@@ -34,27 +59,3 @@ study for coding test
 ### 8. 그래프 이론
 - 크루스칼 알고리즘
 - 위상 정렬 알고리즘
-
-## Programmers : Kit
-### 1. 해시
-- 완주하지 못한 선수
-- 전화번호 목록
-- 위장
-- 베스트앨범 ⭐️
-### 2. 스택/큐
-### 3. 힙
-- 더 맵게
-- 디스크 컨트롤러 ⭐️
-### 4. 정렬
-- K번째 수
-- 가장 큰 수
-### 5. 완전탐색
-### 6. 그리디
-- 체육복
-- 조이스틱
-- 큰 수 만들기
-- 구명보트
-### 7. 동적계획법
-### 8. DFS/BFS
-### 9. 이분탐색
-### 10. 그래프
