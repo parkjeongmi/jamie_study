@@ -2,6 +2,8 @@
 #해시
 #베스트 앨범
 
+#테스트 부분 실패 (중복일 경우)
+
 genres = ["classic", "pop", "classic", "classic", "pop"]
 plays = [500, 600, 150, 800, 2500]
 
@@ -16,12 +18,14 @@ for g, p in zip(genres, plays) :
 #알고리즘2-1. 장르별 재생 횟수 합 구해서 정렬하기
 
 #재생 횟수가 같다면 번호가 작은 것부터 출력
-answer = []
 for i in sorted(di.keys(), key = lambda x : sum(di[x]), reverse= True) :
-    for j in sorted(di[i], reverse=True)[:2] :
-        for k in range(len(plays)) : 
-            if j == plays[k] :
-                answer.append(k)
+    for j in range(len(di[i])) :
+        c = 0
+        if di[i][j] < di[i][j+1] :
+            c = di[i][j+1]
+            di[i][j+1] = di[i][j]
+            di[i][j] = c
+        else : 
 
 
 print(answer)
