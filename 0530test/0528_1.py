@@ -2,8 +2,28 @@
 #프로그래머스
 #베스트앨범
 
-genres = 	["classic", "classic", "classic"]
-plays = [500, 500, 100]
+genres = 	["classic", "pop", "classic", "classic", "pop"]
+plays = [500, 600, 150, 800, 2500]	
+
+# total = {'classic' : 1450, 'pop' : 3100}
+# index = { 'classic' : [(500, 0), (150, 2), (800, 3)], 'pop' : [(600, 1), (2500, 4)]}
+
+def solution(genres, plays):
+    total = {}
+    index = {}
+    for i in range(len(genres)) :
+        genre = genres[i]
+        play = plays[i]
+        total[genre] = total.get(genre, 0) + play
+        index[genre] = index.get(genre, []) + [(play, i)]
+    print(index)
+    total_sort = sorted(total.items(), key = lambda x : x[1], reverse=True)
+    answer = []
+    for (g, p) in total_sort :
+        index[g] = sorted(index[g], key = lambda x : (-x[0], x[1]))
+        answer += [i for (play, i) in index[g][:2]]
+    return answer
+
 
 def solution(genres, plays):
     dict = {}
