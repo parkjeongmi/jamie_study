@@ -10,21 +10,24 @@ for line in range(m) :
     line = tuple(map(int, sys.stdin.readline().split()))
     li.append(line)
 li.sort()
-#[(1, 2), (1, 3), (1, 4), (2, 4), (3, 4)]
-
-
 graph = {}
 for l in li :
     if l[0] not in graph :
         graph[l[0]] = [l[1]]
     else :
         graph[l[0]].extend([l[1]])
+        graph[l[0]].sort()
     
     if l[1] not in graph :
         graph[l[1]] = [l[0]]
     else :
         graph[l[1]].extend([l[0]])
+        graph[l[1]].sort()
 
+
+
+
+print(graph)
 def dfs(graph, start, visit = []) :
     visit = visit + [start]
     for node in graph[start] : 
