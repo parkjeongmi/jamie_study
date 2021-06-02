@@ -1,5 +1,6 @@
-#백준
+#백준 1260
 #DFS BFS
+#런타임에러
 
 import sys
 from collections import deque
@@ -24,10 +25,6 @@ for l in li :
         graph[l[1]].extend([l[0]])
         graph[l[1]].sort()
 
-
-
-
-print(graph)
 def dfs(graph, start, visit = []) :
     visit = visit + [start]
     for node in graph[start] : 
