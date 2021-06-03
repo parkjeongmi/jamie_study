@@ -6,24 +6,15 @@ import sys
 from collections import deque
 
 n, m, v = map(int, sys.stdin.readline().split())
-li = []
-for line in range(m) :
-    line = tuple(map(int, sys.stdin.readline().split()))
-    li.append(line)
-li.sort()
-graph = {}
-for l in li :
-    if l[0] not in graph :
-        graph[l[0]] = [l[1]]
-    else :
-        graph[l[0]].extend([l[1]])
-        graph[l[0]].sort()
-    
-    if l[1] not in graph :
-        graph[l[1]] = [l[0]]
-    else :
-        graph[l[1]].extend([l[0]])
-        graph[l[1]].sort()
+graph = [[] for _ in range(n+1)]
+print(graph)
+
+for _ in range(m) :
+    start, end = map(int, input().split())
+    graph[start].append(end)
+    graph[end].append(start)
+    graph[start].sort()
+    graph[end].sort()
 
 def dfs(graph, start, visit = []) :
     visit = visit + [start]
@@ -44,3 +35,23 @@ def bfs(graph, start) :
 
 print(*dfs(graph,v), sep = ' ')
 print(*bfs(graph,v), sep = ' ')
+
+
+# li = []
+# for line in range(m) :
+#     line = tuple(map(int, sys.stdin.readline().split()))
+#     li.append(line)
+# li.sort()
+# graph = {}
+# for l in li :
+#     if l[0] not in graph :
+#         graph[l[0]] = [l[1]]
+#     else :
+#         graph[l[0]].extend([l[1]])
+#         graph[l[0]].sort()
+    
+#     if l[1] not in graph :
+#         graph[l[1]] = [l[0]]
+#     else :
+#         graph[l[1]].extend([l[0]])
+#         graph[l[1]].sort()
