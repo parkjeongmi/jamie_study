@@ -1,13 +1,12 @@
 #백준 1260
 #DFS BFS
-#런타임에러
 
 import sys
 from collections import deque
 
 n, m, v = map(int, sys.stdin.readline().split())
 graph = [[] for _ in range(n+1)]
-print(graph)
+graph[0] = [0,0]
 
 for _ in range(m) :
     start, end = map(int, input().split())

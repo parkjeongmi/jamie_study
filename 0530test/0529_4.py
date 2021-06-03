@@ -37,7 +37,20 @@ def dfs(graph, start_node, visit=[]) :
             visit = dfs(graph, node, visit)
     return visit
 
+def dfs_stack(graph,start_node) :
+    stack = [start_node]
+    visit = []
+    while stack :
+        node = stack.pop()
+        if node not in visit :
+            visit.append(node)
+            if node in graph :
+                temp = list(set(graph[node]) - set(visit))
+                temp.sort(reverse=True)
+                stack += temp
+    return visit
 
 
 print(bfs(graph, 'A'))
 print(dfs(graph,'A'))
+print(dfs_stack(graph,'A'))
