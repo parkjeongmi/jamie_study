@@ -15,7 +15,7 @@ queue = [[0,0]]
 count_graph[0][0] = 1
 while queue :
     y, x = queue.pop(0)
-    if x == m and y == n :
+    if x == m ad y == n :
         break
     for i in range(4) :
         nx = x + dx[i]
