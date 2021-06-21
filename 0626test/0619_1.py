@@ -6,8 +6,6 @@ import math
 progresses = [93,30,55]
 speeds = [1,30,5]
 
-from collections import deque
-import math
 def solution(progresses, speeds):
     todo = deque()
     for i in range(len(progresses)) :
