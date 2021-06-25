@@ -3,7 +3,7 @@
 
 #모든 정점 연결 + 가중치의 합 최소
 
-#Kruskal
+#Kruskal Algorithm
 #1. 간선 정렬
 #2. 간선이 잇는 두 정점의 root를 찾음
 #3. 다르다면 하나의 root를 바꾸어 연결
